@@ -20,7 +20,6 @@ export function useUsers(searchValue , pageNumber){
             const endPoint = `${apiEndPoints.getUserData}/${user.login}`
             return fetch(endPoint,{
               headers:{
-                'Authorization': `token ${process.env.REACT_APP_GITHUB_TOKEN}`
               }
             })
           })
@@ -52,7 +51,6 @@ export function useUsers(searchValue , pageNumber){
       setError('');
       try{
         let res = await fetch(`${apiEndPoints.getUsers}?q=${searchValue}&page=${pageNumber}` , {headers:{
-          'Authorization': `token ${process.env.REACT_APP_GITHUB_TOKEN}`
         }, signal : controller.signal});
         if(!res.ok){
           throw new Error("Something went wrong")
