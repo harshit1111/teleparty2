@@ -20,7 +20,7 @@ export function useUsers(searchValue , pageNumber){
             const endPoint = `${apiEndPoints.getUserData}/${user.login}`
             return fetch(endPoint,{
               headers:{
-                'Authorization': `token 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`
+                'Authorization': `token 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`
               }
             })
           })
@@ -52,7 +52,7 @@ export function useUsers(searchValue , pageNumber){
       setError('');
       try{
         let res = await fetch(`${apiEndPoints.getUsers}?q=${searchValue}&page=${pageNumber}` , {headers:{
-          'Authorization': `token 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` // hardcoded for now due to issues with deployment
+          'Authorization': `token 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` // hardcoded for now due to issues with deployment
         }, signal : controller.signal});
         if(!res.ok){
           throw new Error("Something went wrong")
