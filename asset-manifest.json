@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/teleparty2/static/js/main.4c15a28e.js",
+    "index.html": "/teleparty2/index.html",
+    "main.4c15a28e.js.map": "/teleparty2/static/js/main.4c15a28e.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.4c15a28e.js"
+  ]
+}
