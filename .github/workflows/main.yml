@@ -1,4 +1,4 @@
-name: CI
+name: deploy
 
 on:
   push:
@@ -21,6 +21,7 @@ jobs:
         npm run-script build
       env:
         REACT_APP_GITHUB_TOKEN: ${{ secrets.REACT_APP_GITHUB_TOKEN }}
+        CI: false
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
