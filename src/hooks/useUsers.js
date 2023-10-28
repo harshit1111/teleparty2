@@ -20,7 +20,7 @@ export function useUsers(searchValue , pageNumber){
             const endPoint = `${apiEndPoints.getUserData}/${user.login}`
             return fetch(endPoint,{
               headers:{
-                'Authorization': `token ${process.env.REACT_APP_GITHUB_TOKEN}`
+                'Authorization': `token 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`
               }
             })
           })
@@ -52,7 +52,7 @@ export function useUsers(searchValue , pageNumber){
       setError('');
       try{
         let res = await fetch(`${apiEndPoints.getUsers}?q=${searchValue}&page=${pageNumber}` , {headers:{
-          'Authorization': `token ${process.env.REACT_APP_GITHUB_TOKEN}`
+          'Authorization': `token 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` // hardcoded for now due to issues with deployment
         }, signal : controller.signal});
         if(!res.ok){
           throw new Error("Something went wrong")
